@@ -18,19 +18,33 @@ func setEnvironment(env string) {
 	environment = env
 }
 
+func setPI(pi string) {
+
+}
+
+func setSprint(sprint string) {
+
+}
+
 func parseArgs(args []string) {
 	var options = make(map[string]ap.Option)
 
-	options["-f"] = ap.Option{
-		Op:       "-f",
-		Required: true,
-		Callback: setFilePath,
-	}
-
 	options["-e"] = ap.Option{
 		Op:       "-e",
-		Required: true,
+		Required: false,
 		Callback: setEnvironment,
+	}
+
+	options["-p"] = ap.Option{
+		Op:       "-p",
+		Required: false,
+		Callback: setPI,
+	}
+
+	options["-s"] = ap.Option{
+		Op:       "-s",
+		Required: false,
+		Callback: setSprint,
 	}
 
 	parser := ap.New(options)
@@ -39,6 +53,10 @@ func parseArgs(args []string) {
 }
 
 func main() {
+
+	config := LoadConfig()
+	fmt.Println("config created: ", config)
+
 	args := os.Args[1:]
 
 	parseArgs(args)
