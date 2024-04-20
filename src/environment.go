@@ -2,34 +2,49 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+	"io"
+	"os"
 )
 
 var defaultEnvFilePath = "C:/ADO/"
 
 type Environment struct {
-	name                 string
-	servers              []string
-	appLibDir            string
-	servicesLibDir       string
-	customServicesLibDir string
+	Name                 string   `json:"name"`
+	Servers              []string `json:"servers"`
+	AppLibDir            string   `json:"appLibDir"`
+	ServicesLibDir       string   `json:"servicesLibDir"`
+	CustomServicesLibDir string   `json:"customServicesLibDir"`
 }
 
-type FileReader struct {
+type Environments struct {
+	Environments []Environment `json:"environments"`
 }
 
-func (reader FileReader) Read(p []byte) (n int, err error) {
-	return 0, nil
+func LoadEnvironments() *Environments {
+	return LoadEnvironmentsWithPath("\\res\\environments.json")
 }
 
-func LoadEnvironments(envFile string) []*Environment {
+func LoadEnvironmentsWithPath(envFile string) *Environments {
+	var environments Environments
 
-	var reader FileReader
+	dir, err := os.Getwd()
+	file, err := os.Open(dir + envFile)
 
-	decoder := json.NewDecoder(reader)
-	fmt.Println("decoder created: ", decoder)
+	defer file.Close()
 
-	return nil
+	if err != nil {
+		panic("ERROR - environments.json file not found")
+	}
+
+	bytes, err := io.ReadAll(file)
+
+	if err != nil {
+		panic("ERROR - Unable to READ environments.json")
+	}
+
+	json.Unmarshal(bytes, &environments)
+
+	return &environments
 }
 
 func GetEnvironment(envName string) *Environment {

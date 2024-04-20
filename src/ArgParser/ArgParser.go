@@ -1,9 +1,5 @@
 package argparser
 
-import (
-	"fmt"
-)
-
 type Option struct {
 	ConfigValue string
 	Required    bool
@@ -26,9 +22,7 @@ func (parser argparser) Parse(args []string, config *map[string]string) {
 
 		if ok {
 			if index+1 < len(args) {
-				fmt.Println("setting ", parser.options[arg].ConfigValue, " to : ", args[index+1])
 				(*config)[parser.options[arg].ConfigValue] = args[index+1]
-				// parser.options[arg].Callback(args[index+1])
 			} else {
 				panic("Argument not supplied a value")
 			}

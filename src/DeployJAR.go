@@ -49,11 +49,16 @@ func parseArgs(args []string) {
 func main() {
 
 	config = LoadConfig()
-	fmt.Println("config TFS_ROOT: ", (*config)["TFS_ROOT"])
 
 	args := os.Args[1:]
 
 	parseArgs(args)
+
+	PrintConfig(config)
+
+	environments := LoadEnvironments()
+
+	fmt.Println("Environments: ", environments)
 
 	fmt.Println("Done")
 }
