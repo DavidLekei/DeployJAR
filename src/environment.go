@@ -47,6 +47,11 @@ func LoadEnvironmentsWithPath(envFile string) *Environments {
 	return &environments
 }
 
-func GetEnvironment(envName string) *Environment {
+func GetEnvironment(env string, environments *Environments) *Environment {
+	for _, environment := range environments.Environments {
+		if environment.Name == env {
+			return &environment
+		}
+	}
 	return nil
 }

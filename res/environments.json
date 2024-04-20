@@ -1,6 +1,7 @@
-[
+{
+    "environments" : [
     {
-        "environment": "DEV",
+        "name": "DEV",
         "servers": [
             "bandit"
         ],
@@ -9,7 +10,7 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-custom-servicesDEV.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     },
     {
-        "environment": "SIT",
+        "name": "SIT",
         "servers": [
             "snoopy01",
             "snoopy02"
@@ -19,7 +20,7 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-custom-services-SIT.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     },
     {
-        "environment": "UAT1",
+        "name": "UAT1",
         "servers": [
             "deputy01",
             "deputy02"
@@ -29,7 +30,7 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-custom-services\\UAT1.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     },
     {
-        "environment": "ProdSupp",
+        "name": "ProdSupp",
         "servers": [
             "howie"
         ],
@@ -38,7 +39,7 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     },
     {
-        "environment": "SPSE",
+        "name": "SPSE",
         "servers": [
             "howie"
         ],
@@ -47,7 +48,7 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-SPSE.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     },
     {
-        "environment": "Training",
+        "name": "Training",
         "servers": [
             "howie"
         ],
@@ -56,3 +57,4 @@
         "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
     }
 ]
+}

@@ -58,7 +58,9 @@ func main() {
 
 	environments := LoadEnvironments()
 
-	fmt.Println("Environments: ", environments)
+	environment := GetEnvironment((*config)["ENVIRONMENT"], environments)
+
+	fmt.Println("Environment data: ", environment)
 
 	fmt.Println("Done")
 }
