@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"os"
+	"strings"
 )
 
 var defaultConfigPath = "\\res\\config.cfg"
@@ -26,7 +26,7 @@ type FileLineReader interface {
 	ReadLine() (string, error)
 }
 
-func (reader LineReader) ReadLine() (string, error) {
+func (reader *LineReader) ReadLine() (string, error) {
 
 	reader.file.Seek(reader.offset, WHENCE_FILE_ORIGIN)
 
@@ -34,39 +34,45 @@ func (reader LineReader) ReadLine() (string, error) {
 	buffer := make([]byte, 1)
 
 	n, err := reader.file.Read(buffer)
-	count := 0
+	var count int64
 
-	for err == nil {
+	for err == nil && buffer[0] != '\n' && n != 0 {
 		stringBuffer[count] = buffer[0]
 		count++
+		n, err = reader.file.Read(buffer)
 	}
 
+	s := string(stringBuffer[0:count])
+
+	reader.offset = reader.offset + count + 1 //+1 to go PAST the newline character
+
+	return s, err
 }
 
-func LoadConfig() *Config {
+func LoadConfig() *map[string]string {
 	return LoadConfigFromPath(defaultConfigPath)
 }
 
-func LoadConfigFromPath(configFilePath string) *Config {
+func LoadConfigFromPath(configFilePath string) *map[string]string {
 	dir, err := os.Getwd()
 	file, err := os.Open(dir + configFilePath)
 	if err != nil {
 		panic("ERROR: Could not open file: " + dir + configFilePath)
 	}
 
-	fmt.Println("File contents: ", file)
-
 	reader := LineReader{
 		offset: 0,
 		file:   file,
 	}
 
-	line, err := reader.ReadLine()
+	config := make(map[string]string)
 
+	line, err := reader.ReadLine()
 	for err == nil {
+		s := strings.Split(line, "=")
+		config[s[0]] = s[1]
 		line, err = reader.ReadLine()
-		fmt.Println("Line: ", line)
 	}
 
-	return nil
+	return &config
 }

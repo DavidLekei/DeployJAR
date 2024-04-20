@@ -7,62 +7,53 @@ import (
 	ap "mpi.mb.ca/DeployJAR/argparser"
 )
 
-var filePath string
-var environment string
+var config *map[string]string
 
-func setFilePath(path string) {
-	filePath = path
-}
-
-func setEnvironment(env string) {
-	environment = env
-}
-
-func setPI(pi string) {
-
-}
-
-func setSprint(sprint string) {
-
+func setConfigValue(setting string, value string) {
+	(*config)[setting] = value
 }
 
 func parseArgs(args []string) {
 	var options = make(map[string]ap.Option)
 
 	options["-e"] = ap.Option{
-		Op:       "-e",
-		Required: false,
-		Callback: setEnvironment,
+		ConfigValue: "ENVIRONMENT",
+		Required:    false,
 	}
 
 	options["-p"] = ap.Option{
-		Op:       "-p",
-		Required: false,
-		Callback: setPI,
+		ConfigValue: "CURRENT_PI",
+		Required:    false,
 	}
 
 	options["-s"] = ap.Option{
-		Op:       "-s",
-		Required: false,
-		Callback: setSprint,
+		ConfigValue: "SPRINT",
+		Required:    false,
+	}
+
+	options["-j"] = ap.Option{
+		ConfigValue: "JAR_NAME",
+		Required:    false,
+	}
+
+	options["-v"] = ap.Option{
+		ConfigValue: "VERBOSE",
+		Required:    false,
 	}
 
 	parser := ap.New(options)
 
-	parser.Parse(args)
+	parser.Parse(args, config)
 }
 
 func main() {
 
-	config := LoadConfig()
-	fmt.Println("config created: ", config)
+	config = LoadConfig()
+	fmt.Println("config TFS_ROOT: ", (*config)["TFS_ROOT"])
 
 	args := os.Args[1:]
 
 	parseArgs(args)
-
-	fmt.Println("Path to JAR File: ", filePath)
-	fmt.Println("Environment: ", environment)
 
 	fmt.Println("Done")
 }
