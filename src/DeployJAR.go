@@ -46,6 +46,12 @@ func parseArgs(args []string) {
 	parser.Parse(args, config)
 }
 
+func deployJar(config *map[string]string, environment *Environment) {
+	jarPath := string((*config)["TFS_ROOT"]) + "\\PI" + (*config)["CURRENT_PI"] + "\\S" + (*config)["SPRINT"] + "\\" + (*config)["JAR_FOLDER"] + "\\" + (*config)["JAR_NAME"]
+
+	fmt.Println("JAR FILE: ", jarPath)
+}
+
 func main() {
 
 	config = LoadConfig()
@@ -54,13 +60,11 @@ func main() {
 
 	parseArgs(args)
 
-	PrintConfig(config)
-
 	environments := LoadEnvironments()
 
 	environment := GetEnvironment((*config)["ENVIRONMENT"], environments)
 
-	fmt.Println("Environment data: ", environment)
+	deployJar(config, environment)
 
 	fmt.Println("Done")
 }

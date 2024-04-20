@@ -24,6 +24,7 @@ func LoadConfig() *map[string]string {
 func LoadConfigFromPath(configFilePath string) *map[string]string {
 	dir, err := os.Getwd()
 	file, err := os.Open(dir + configFilePath)
+	defer file.Close()
 	if err != nil {
 		panic("ERROR: Could not open file: " + dir + configFilePath)
 	}
@@ -38,7 +39,7 @@ func LoadConfigFromPath(configFilePath string) *map[string]string {
 	line, err := reader.ReadLine()
 	for err == nil {
 		s := strings.Split(line, "=")
-		config[s[0]] = s[1]
+		config[s[0]] = strings.TrimSuffix(s[1], "\r")
 		line, err = reader.ReadLine()
 	}
 
