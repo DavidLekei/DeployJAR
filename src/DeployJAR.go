@@ -20,26 +20,37 @@ func parseArgs(args []string) {
 	options["-e"] = ap.Option{
 		ConfigValue: "ENVIRONMENT",
 		Required:    false,
+		Help:        "\t-e\t\tEnvironment - string\tDefault: DEV\n\t\t\t\tValid values: DEV/SIT/UAT1/UAT1/ProdSupp/SPSE/Training",
 	}
 
 	options["-p"] = ap.Option{
 		ConfigValue: "CURRENT_PI",
 		Required:    false,
+		Help:        "\t-p\t\tCurrent PI - integer\tDefault: N/A",
 	}
 
 	options["-s"] = ap.Option{
 		ConfigValue: "SPRINT",
 		Required:    false,
+		Help:        "\t-s\t\tSprint - integer\tDefault: N/A",
 	}
 
 	options["-j"] = ap.Option{
 		ConfigValue: "JAR_NAME",
 		Required:    false,
+		Help:        "\t-j\t\tJAR File name - string\tDefault: MPI.jar",
 	}
 
 	options["-v"] = ap.Option{
 		ConfigValue: "VERBOSE",
 		Required:    false,
+		Help:        "\t-v\t\tVerbose - boolean\tDefault: false",
+	}
+
+	options["-services"] = ap.Option{
+		ConfigValue: "DEPLOY_TO_SERVICES",
+		Required:    false,
+		Help:        "\t-services\tDeploy to Services - boolean\tDefault: false\n\t\t\t\tWhen true, will deploy the JAR file to the services and custom services areas as well.",
 	}
 
 	parser := ap.New(options)
