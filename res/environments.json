@@ -5,9 +5,9 @@
         "servers": [
             "bandit"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-DEV.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-services-DEV.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-custom-servicesDEV.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-DEV.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-services-DEV.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\BanditCell01\\fineos-custom-servicesDEV.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     },
     {
         "name": "SIT",
@@ -15,9 +15,9 @@
             "snoopy01",
             "snoopy02"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-SIT.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-services-SIT.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-custom-services-SIT.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-SIT.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-services-SIT.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\Snoopy01Cell01\\fineos-custom-services-SIT.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     },
     {
         "name": "UAT1",
@@ -25,36 +25,36 @@
             "deputy01",
             "deputy02"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-UAT1.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-services-UAT1.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-custom-services\\UAT1.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-UAT1.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-services-UAT1.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\deputy01Cell01\\fineos-custom-services\\UAT1.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     },
     {
         "name": "ProdSupp",
         "servers": [
             "howie"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-ProdSupp.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-ProdSupp.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-ProdSupp.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-ProdSupp.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     },
     {
         "name": "SPSE",
         "servers": [
             "howie"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-SPSE.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-SPSE.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-SPSE.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-SPSE.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-SPSE.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-SPSE.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     },
     {
         "name": "Training",
         "servers": [
             "howie"
         ],
-        "appLibDir" : "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-Training.ear\\MPI.war\\WEB-INF\\lib",
-        "servicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-Training.ear\\fineos-services.war\\WEB-INF\\lib",
-        "customServicesLibDir": "D:\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib"
+        "appLibDir" : "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-Training.ear\\MPI.war\\WEB-INF\\lib\\",
+        "servicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-services-Training.ear\\fineos-services.war\\WEB-INF\\lib\\",
+        "customServicesLibDir": "D$\\IBM\\WebSphere85\\AppServer\\profiles\\AppSrv01\\installedApps\\howieCell01\\fineos-custom-services-ProdSupp.ear\\mpi-fineos-services.war\\WEB-INF\\lib\\"
     }
 ]
 }
